@@ -1,0 +1,14 @@
+.calories-slider.MuiSlider-root {
+  width: 300px;
+}
+
+.calories-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .calories-textfield.MuiTextField-root {
+    margin-top: 10px;
+  }
+}

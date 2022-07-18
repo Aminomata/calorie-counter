@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import CaloriesSlider from './components/CaloriesSlider/CaloriesSlider';
+import './App.scss';
+import { Container } from '@mui/system';
+import { macrosEnum } from './components/MacroSlider/constants';
+import MacroSlider from './components/MacroSlider/MacroSlider';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container maxWidth="sm">
+        <CaloriesSlider />
+        {Object.keys(macrosEnum).map(v => <MacroSlider key={v} macroType={v} />)}
+      </Container>
     </div>
   );
 }
