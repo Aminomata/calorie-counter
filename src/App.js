@@ -1,16 +1,13 @@
-import CaloriesSlider from './components/CaloriesSlider/CaloriesSlider';
+import { CssBaseline } from '@mui/material';
+import MainPage from './pages/MainPage/MainPage';
+
 import './App.scss';
-import { Container } from '@mui/system';
-import { macrosEnum } from './components/MacroSlider/constants';
-import MacroSlider from './components/MacroSlider/MacroSlider';
 
 function App() {
   return (
     <div className="App">
-      <Container maxWidth="sm">
-        <CaloriesSlider />
-        {Object.keys(macrosEnum).map(v => <MacroSlider key={v} macroType={v} />)}
-      </Container>
+      <CssBaseline />
+      <MainPage />
     </div>
   );
 }
