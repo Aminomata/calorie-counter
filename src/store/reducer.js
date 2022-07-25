@@ -14,10 +14,10 @@ const macroSlice = createSlice({
   name: 'macro',
   initialState,
   reducers: {
-    setCalories: (state, action) => void(state.calories = action.payload),
-    setCarbohydratesPercentage: (state, action) => void(state.macroPercentage.carbohydrates = action.payload),
-    setProteinsPercentage: (state, action) => void(state.macroPercentage.proteins = action.payload),
-    setFatsPercentage: (state, action) => void(state.macroPercentage.fats = action.payload),
+    setCalories: (state, action) => { state.calories = action.payload },
+    setCarbohydratesPercentage: (state, action) => { state.macroPercentage.carbohydrates = action.payload },
+    setProteinsPercentage: (state, action) => { state.macroPercentage.proteins = action.payload },
+    setFatsPercentage: (state, action) => { state.macroPercentage.fats = action.payload },
   },
 })
 
@@ -31,10 +31,10 @@ const macroTypeToAction = {
 
 const macroReducer = macroSlice.reducer
 
-export { 
+export {
   macroTypeToAction,
-  setCalories, 
-  setCarbohydratesPercentage, 
+  setCalories,
+  setCarbohydratesPercentage,
   setProteinsPercentage,
   setFatsPercentage,
   macroReducer
