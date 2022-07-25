@@ -28,10 +28,10 @@ const MacroSlider = ({ macroType }) => {
       step={1}
     />
     <Stack direction="row" spacing={2}>
-      <span>{`Grams ${calculatedGrams}`}</span>
+      <span>{`Grams ${calculatedGrams}g`}</span>
       <span>{`Calories ${calculatedCalories}`}</span>
       {/* <TextField className="macroPercentage-textfield" label={`${macroType} calories`} variant="outlined" value={localMacroPercentage} onChange={handleSetLocalMacro} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} /> */}
-      <TextField className="macroPercentage-textfield" label={`${macroType} percentage`} variant="outlined" value={localMacroPercentage} onChange={handleSetLocalMacro} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
+      <TextField className="macroPercentage-textfield" label={`${macroType} %`} variant="outlined" value={localMacroPercentage} onChange={handleSetLocalMacro} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
     </Stack>
   </div>
 }

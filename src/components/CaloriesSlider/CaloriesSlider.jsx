@@ -12,7 +12,7 @@ const CaloriesSlider = () => {
 
   return <div className="calories-container">
     <Stack direction="row" spacing={2}>
-      <TextField className="calories-textfield" label="Outlined" variant="outlined" value={calories} onChange={(event) => handleSetCalories(event.target.value)} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
+      <TextField className="calories-textfield" label="Calories" variant="outlined" value={calories} onChange={(event) => handleSetCalories(event.target.value)} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
       <ButtonGroup disableElevation orientation="vertical" variant="contained">
         <Button onClick={() => handleSetCalories(calories + 5)}><Add /></Button>
         <Button onClick={() => handleSetCalories(calories - 5)}><Remove /></Button>
