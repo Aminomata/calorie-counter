@@ -1,6 +1,7 @@
 import { Add, Remove } from '@mui/icons-material'
 import { Button, ButtonGroup, Stack, TextField } from '@mui/material'
 import { useSelector, useDispatch } from 'react-redux'
+import { draw } from '../../api/draw'
 import { setCalories } from '../../store/reducer'
 import './caloriesSlider.scss'
 
@@ -17,6 +18,7 @@ const CaloriesSlider = () => {
         <Button onClick={() => handleSetCalories(calories + 5)}><Add /></Button>
         <Button onClick={() => handleSetCalories(calories - 5)}><Remove /></Button>
       </ButtonGroup>
+      <div onClick={() => draw(calories)}>Save</div>
     </Stack>
   </div >
 }
