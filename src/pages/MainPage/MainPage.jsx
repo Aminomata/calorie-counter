@@ -9,13 +9,17 @@ import './mainPageStyles.scss'
 const MainPage = () => {
   return <>
     <HeaderComponent />
-    <Container maxWidth="sm">
-        <CustomCard>
-          <CaloriesSlider />
-        </CustomCard>
+    <Container className='mainContainer' maxWidth="sm">
+        <Stack spacing={5}>
+          <CustomCard>
+            <CaloriesSlider />
+          </CustomCard>
           <Stack spacing={5}>
-            {Object.values(macrosEnum).map(v => <MacroSlider key={v} macroType={v} />)}
+            <CustomCard>
+              {Object.values(macrosEnum).map(v => <MacroSlider key={v} macroType={v} />)}
+            </CustomCard>
           </Stack>
+        </Stack>
     </Container>
   </>
 }

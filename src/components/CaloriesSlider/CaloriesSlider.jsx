@@ -8,9 +8,7 @@ const CaloriesSlider = () => {
   const calories = useSelector((state) => state.macro.calories)
   const dispatch = useDispatch()
 
-  console.log(calories)
-
-  const handleSetCalories = (value) => dispatch(setCalories(value))
+  const handleSetCalories = (value) => dispatch(setCalories(value)) 
 
   return <div className="calories-container">
     <Stack direction="row" spacing={2}>
