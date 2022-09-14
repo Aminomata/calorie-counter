@@ -8,11 +8,12 @@ import { macrosMap } from "./constants"
 const MacroSlider = ({ macroType }) => {
   const macroPercentage = useSelector((state) => state.macro.macroPercentage[macroType.toLowerCase()])
   const calories = useSelector((state) => state.macro.calories)
+
   const dispatch = useDispatch()
 
   const [localMacroPercentage, setLocalMacroPercentage] = useState(macroPercentage)
 
-  const handleSetLocalMacro = (event) => setLocalMacroPercentage(event.target.value)
+  const handleSetLocalMacro = (event) => setLocalMacroPercentage(Number(event.target.value))
 
   const handleSetMacro = (_, value) => dispatch(macroTypeToAction[macroType](value))
 
@@ -30,8 +31,7 @@ const MacroSlider = ({ macroType }) => {
     <Stack direction="row" spacing={2}>
       <span>{`Grams ${calculatedGrams}g`}</span>
       <span>{`Calories ${calculatedCalories}`}</span>
-      {/* <TextField className="macroPercentage-textfield" label={`${macroType} calories`} variant="outlined" value={localMacroPercentage} onChange={handleSetLocalMacro} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} /> */}
-      <TextField className="macroPercentage-textfield" label={`${macroType} %`} variant="outlined" value={localMacroPercentage} onChange={handleSetLocalMacro} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
+      <TextField type='number' className="macroPercentage-textfield" label={`${macroType} %`} variant="outlined" value={localMacroPercentage} onChange={handleSetLocalMacro} inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
     </Stack>
   </div>
 }
