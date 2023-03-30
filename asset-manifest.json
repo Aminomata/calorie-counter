@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/calorie-counter/static/css/main.dea39798.css",
-    "main.js": "/calorie-counter/static/js/main.6c73054b.js",
+    "main.js": "/calorie-counter/static/js/main.1a0b8588.js",
     "static/js/787.8284004c.chunk.js": "/calorie-counter/static/js/787.8284004c.chunk.js",
     "index.html": "/calorie-counter/index.html",
     "main.dea39798.css.map": "/calorie-counter/static/css/main.dea39798.css.map",
-    "main.6c73054b.js.map": "/calorie-counter/static/js/main.6c73054b.js.map",
+    "main.1a0b8588.js.map": "/calorie-counter/static/js/main.1a0b8588.js.map",
     "787.8284004c.chunk.js.map": "/calorie-counter/static/js/787.8284004c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dea39798.css",
-    "static/js/main.6c73054b.js"
+    "static/js/main.1a0b8588.js"
   ]
 }
